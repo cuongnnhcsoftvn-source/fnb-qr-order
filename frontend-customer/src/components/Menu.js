@@ -6,7 +6,7 @@ export default function Menu({ tableId }) {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/menu")
+    axios.get("https://fnb-qr-order-backend.onrender.com/api/menu")
       .then(res => setMenu(res.data))
   }, []);
 
@@ -20,7 +20,7 @@ export default function Menu({ tableId }) {
   }
 
   const sendOrder = () => {
-    axios.post("http://localhost:3000/api/orders", { table_id: tableId, items: cart })
+    axios.post("https://fnb-qr-order-backend.onrender.com/api/orders", { table_id: tableId, items: cart })
       .then(()=>alert("Order sent!"))
       .catch(()=>alert("Error"))
   }
