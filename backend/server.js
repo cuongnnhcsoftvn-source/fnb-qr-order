@@ -12,9 +12,9 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: 'localhost', // thay bằng cloud MySQL
-  user: 'root',
-  password: '',
+  host: 'dpg-d4mi3gu3jp1c739ujks0-a', // thay bằng cloud MySQL
+  user: 'fnb_app_user',
+  password: '6HAYc7CkyIxUEJ750ccuiJyLbMy6fl4K',
   database: 'fnb_app'
 });
 
